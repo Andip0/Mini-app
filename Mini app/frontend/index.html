@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel Job Runner</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <h1>Parallel Job <span>Runner</span></h1>
+    </header>
+
+    <div class="card">
+      <span class="card-title">Submit a Job</span>
+
+      <div class="form-row">
+        <div>
+          <label for="numbers-input">Numbers (comma-separated)</label>
+          <input type="text" id="numbers-input" placeholder="1, 2, 3, 4, 5, 6, 7, 8" value="1, 2, 3, 4, 5, 6, 7, 8" />
+          <p class="hint">1–50 numbers · decimals OK (not for factorial)</p>
+        </div>
+        <div>
+          <label for="op-select">Operation</label>
+          <select id="op-select">
+            <option value="square">Square (n²)</option>
+            <option value="cube">Cube (n³)</option>
+            <option value="factorial">Factorial (n!)</option>
+          </select>
+          <p class="hint">Applied to each number in parallel</p>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-primary" id="submit-btn" onclick="submitJob()">▶ &nbsp;Run Job</button>
+      </div>
+
+      <p id="status"></p>
+    </div>
+
+    <div class="card" id="results"></div>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>
